@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billedeserie i Geckoboard</title>
+    <style>
+        body { text-align: center; background-color: #f8f8f8; }
+        img { width: 100%; max-width: 600px; height: auto; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <img id="slideshow" src="https://github.com/TK-ACTUS/OPA/blob/main/1c025945-2a4f-48c3-861d-a6a04166b37a-w.jpg?raw=true" alt="Billedeserie">
+    <script>
+        var images = [
+            "https://github.com/TK-ACTUS/OPA/blob/main/1c025945-2a4f-48c3-861d-a6a04166b37a-w.jpg?raw=true",
+            "https://github.com/TK-ACTUS/OPA/blob/main/2ac90e31-3a4e-4b80-9035-bd619f8ac82d-w.jpg?raw=true",
+            "hhttps://github.com/TK-ACTUS/OPA/blob/main/3f6a9a89-2a5f-4050-86d9-de97e0f050d6-w.png?raw=true",
+            "https://github.com/TK-ACTUS/OPA/blob/main/4e336b14-5434-401e-bddf-219be63c3ac8-w.jpg?raw=true",
+            "https://github.com/TK-ACTUS/OPA/blob/main/5483e940-7965-42bf-8f0f-a23f43a36b3c-w.jpg?raw=true",
+            "https://github.com/TK-ACTUS/OPA/blob/main/5cc5606b-6f27-4aaa-97c4-c016020cac47-w.png?raw=true",
+            "https://github.com/TK-ACTUS/OPA/blob/main/7dbfe4a1-fef9-4fbf-bfb5-f0f6863ceaf2-w.jpg?raw=true",
+            "https://github.com/TK-ACTUS/OPA/blob/main/deb37f62-30c0-42a3-80a2-91f97deecd3d-w.jpg?raw=true"
+        ];
+        var index = 0;
+        setInterval(function() {
+            index = (index + 1) % images.length;
+            document.getElementById("slideshow").src = images[index];
+        }, 5000); // Skifter billede hvert 5. sekund
+    </script>
+</body>
+</html>
